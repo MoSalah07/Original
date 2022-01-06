@@ -1,0 +1,76 @@
+import { messages } from "./messages.js";
+
+console.log(messages());
+const mainContainer = document.querySelector(".main");
+const createUserModel = document.querySelector(".create-user-model");
+const addUser = document.querySelector(".create-message");
+const closeBtn = document.querySelector(".fa-times");
+const addUserBtn = document.querySelector(".fa-plus-square");
+const contactsContainer = document.querySelector(".messages");
+const Days = ["Saturday", "Sunday", "Monday", "Tuseday", "Wednsday", "Thursday", "Firdays"];
+const users = [];
+
+function displayContacts() {
+  contactsContainer.innerHTML = "";
+  users.forEach((user) => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+    <div class="message">
+    <div class="profile-pic">
+      <img src="${user.porfilePic}" alt="" />
+    </div>
+    <div class="message-info">
+      <div class="name">${user.name}</div>
+      <div class="message-data">${user.about}</div>
+    </div>
+    <div class="time">${user.time.hours}:${user.time.min} <span>PM</span></div>
+  </div>
+    `;
+    contactsContainer.appendChild(div);
+  });
+}
+
+displayContacts();
+
+addUser.addEventListener("click", () => {
+  const createContainer = document.createElement("div");
+  createContainer.classList.toggle("create-container");
+  createUserModel.classList.add("open-model");
+  document.body.appendChild(createContainer);
+  closeModel(createContainer);
+});
+
+const closeModel = (elem) => {
+  closeBtn.addEventListener("click", () => {
+    elem.remove();
+    createUserModel.classList.remove("open-model");
+  });
+};
+
+addUserBtn.addEventListener("click", () => {
+  const name = document.querySelector(".user-name");
+  const about = document.querySelector(".user-about");
+  const date = new Date();
+
+  const hours = date.getHours() === 0 ? 12 : date.getHours();
+  const min = date.getMinutes() < 10 ? 0${date.getMinutes()} : date.getMinutes();
+  if (name.value.trim().length === 0) return;
+  if (about.value.trim().length === 0) return;
+  const userOb = {
+    id: Math.floor(Math.random() * 1000000),
+    name: name.value,
+    about: about.value,
+    porfilePic: "https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png",
+    time: {
+      hours: hours,
+      min: min,
+    },
+  };
+  users.push(userOb);
+  document.querySelector(".create-user-model").classList.toggle("open-model");
+  document.querySelector(".create-container").remove();
+  console.log(users);
+  name.value = "";
+  about.value = "";
+  displayContacts();
+});

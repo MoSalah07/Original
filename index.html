@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' content="Msg">
+    <!-- Font AweSome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Messanger Chat</title>
+</head>
+<body>
+    <div class="landing">
+        <div class="container">
+            <div class="gird-container overlay">
+                <div class="users-msg ">
+                    <div class="search">
+                        <div class="inputs">
+                            <input type="search" id='search' class='btn-search' placeholder="search">
+                            <i class="fas fa-user-plus add-user"></i>
+                        </div>
+                        <ul class="list-users">
+                            <!-- <li>
+                                <img src="Images/One.jpg" alt="user">
+                                <div class="list-info-users">
+                                    <h4 class="username">thomas bangalter</h4>
+                                    <span class="user-message">i was wondering</span>
+                                </div>
+                                <div class="date">
+                                    <span class='my-date'>2:09</span>
+                                    <span>pm</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="Images/Profile-Dogs.jpg" alt="user">
+                                <div class="list-info-users">
+                                    <h4 class="username">dog woofson</h4>
+                                    <span class="user-message">i've forgotten how it felt b</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="Images/Three.jpg" alt="user">
+                                <div class="list-info-users">
+                                    <h4 class="username">louis CK</h4>
+                                    <span class="user-message">but we're probably gonna</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="Images/Four.jpg" alt="user">
+                                <div class="list-info-users">
+                                    <h4 class="username">bo jackson</h4>
+                                    <span class="user-message">it's not that bad</span>
+                                </div>
+                                <div class="date">
+                                    <span class='my-date'>2:09</span>
+                                    <span>pm</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="Images/Five.jpg" alt="user">
+                                <div class="list-info-users">
+                                    <h4 class="username">michael jordan</h4>
+                                    <span class="user-message">wasup for the third time</span>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="Images/Six.jpg" alt="user">
+                                <div class="list-info-users">
+                                    <h4 class="username">drake</h4>
+                                    <span class="user-message">howdoyoudoaspace</span>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="screen-chat ">
+                    <div class="to-msg">
+                        <i class="fas fa-arrow-left go-back"></i>
+                        <span>to:</span><b class='title-user'>darke</b>
+                        <input type="text">
+                    </div>
+                    <div class="content">
+                        <div class="old-msg">
+                        </div>
+                        <div class="new-msg">
+                            <span class='sending-time'>monday, 1:27 PM</span>
+                            <div class="info-msg">
+                                <!-- <p class='msg-left'>so, how's your new phone?</p>
+                                <p class='msg-right'>drake?</p>
+                                <p class="msg-right">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, inventore?</p>
+                                <p class="msg-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, amet.</p>
+                                <p class='msg-left'>so, how's your new phone?</p>
+                                <p class='msg-right'>drake?</p>
+                                <p class='msg-left'>so, how's your new phone?</p>
+                                <p class='msg-right'>drake?</p>
+                                <p class='msg-left'>so, how's your new phone?</p>
+                                <p class='msg-right'>drake?</p>
+                                <p class='msg-left'>so, how's your new phone?</p>
+                                <p class='msg-right'>drake?</p>
+                                <p class='msg-left'>so, how's your new phone?</p>
+                                <p class='msg-right'>drake?</p> -->
+                            </div>
+                        </div>
+                        <div class="send-tools">
+                            <i class="fas fa-paperclip file-paperclip"></i>
+                            <input type="text" id='chating'>
+                            <i class="far fa-smile imo-smile"></i>
+                            <i class="far fa-paper-plane imo-send"></i>
+                            <i class="fas fa-trash-alt imo-clear"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop-up">
+                    <div class="overlay">
+                        <div class="form">
+                            <form>
+                                <i class="fas fa-times close-form"></i>
+                                <input type="text" id='my-user' placeholder="Write Your Name">
+                                <input type="text" id='own-msg' required>
+                                <button type="submit" id='btn-sub'><i class="fas fa-plus"></i></button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='js/main.js'></script>
+</body>
+</html>
